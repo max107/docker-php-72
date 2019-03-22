@@ -7,3 +7,4 @@ RUN docker-php-ext-configure intl && \
     docker-php-ext-install zip pdo_mysql xml gd bcmath intl sockets
 RUN pecl install xdebug mongodb memcached && \
     docker-php-ext-enable xdebug mongodb memcached
+RUN curl --show-error --silent https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
